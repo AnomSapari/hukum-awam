@@ -1,20 +1,3 @@
-import Papa from 'papaparse';
-
-export interface PasalData {
-  slug: string;
-  kategori: string;
-  nomorPasal: string;
-  bunyiAsli: string;
-  bahasaAwam: string;
-  ancaman: string;
-  contoh: string;
-  sumberKasusRiil: string;
-  detailKasusRiil: string;
-}
-
-// GANTI TEKS DI BAWAH INI DENGAN ID GOOGLE SHEETS MILIK ANDA SENDIRI
-const SPREADSHEET_ID = '1A2B3C4D5E6F7G8H9I0J'; 
-const SHEET_URL = `google.com{SPREADSHEET_ID}/pub?output=csv`;
 
 export async function ambilDataDariSheets(): Promise<PasalData[]> {
   try {
